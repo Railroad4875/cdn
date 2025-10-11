@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Trees Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .question-element {
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+            margin: 16px auto;
+            max-width: 800px;
+        }
+        
+        .panel-body {
+            padding: 16px;
+            background-color: #ffffff;
+        }
+        
+        .title-153524 {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+        
+        .label-default {
+            background-color: #6c757d;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+        
+        .wikitext p {
+            margin-bottom: 0;
+            line-height: 1.5;
+            color: #495057;
+            font-size: 0.95rem;
+        }
+        
+        .panel-footer {
+            padding: 16px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .help-block {
+            margin-bottom: 12px;
+            color: #6c757d;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        .radio, .checkbox {
+            display: block;
+            margin-bottom: 12px;
+            padding: 10px 12px;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .radio:hover, .checkbox:hover {
+            border-color: #adb5bd;
+            background-color: #f9f9f9;
+        }
+        
+        .radio input[type="radio"], .checkbox input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.1);
+        }
+        
+        .save-button {
+            margin-left: 6px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        
+        .btn-warning {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #212529;
+        }
+        
+        .glyphicon {
+            margin-right: 4px;
+        }
+        
+        .collapse-pane-content {
+            max-height: 150px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+        
+        .row {
+            margin-top: 16px;
+        }
+        
+        .pull-right {
+            float: right;
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-3">
+        <!-- First Question - Radio Buttons -->
+        <div id="mcqab6100d84-8d90-46dd-8592-f7adba18c3ae" class="webdsl-placeholder">
+            <div class="panel panel-default question-element">
+                <div class="panel-body toggle-on-fullscreen">
+                    <span class="pull-right">
+                        <span class="label-default label">weight: 1.0</span>
+                    </span>
+                    <h3 data-orig-title="Decision Trees Selection" class="text-muted title-153524">Decision Trees Selection</h3>
+                    <div id="ce49fe9ada46a563b1d105a75c356b15" class="collapse-pane open">
+                        <div class="collapse-pane-content">
+                            <div class="wikitext">
+                                <p>A decision tree is created by splitting the data sequentially on the basis of an attribute. How do you determine which attribute to split the data on?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <p>
+                        <span class="help-block">Select <strong>one</strong> option </span>
+                    </p>
+                    <form name="form_1855340102081b1d65d5cbe0088cfe1cc83275db9e7" id="form_1855340102081b1d65d5cbe0088cfe1cc83275db9e7" accept-charset="UTF-8" method="POST" class="changes-tracked">
+                        <input type="hidden" name="form_1855340102081b1d65d5cbe0088cfe1cc83275db9e7" value="1">
+                        <input type="hidden" name="sub" value="b6100d84-8d90-46dd-8592-f7adba18c3ae">
+                        <input type="hidden" name="tab" value="">
+                        <input type="hidden" name="inline" value="false">
+                        <label class="radio">
+                            <input type="radio" name="e4f74805e33ff9c24af3a62a3ae4452c" value="2d510904-8225-457f-8fba-9659bc4e0436">
+                            <div class="wikitext">
+                                <p>You take the first attribute in the list.</p>
+                            </div>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="e4f74805e33ff9c24af3a62a3ae4452c" value="1b73a19c-ff15-48db-86e7-9219d81ad3be">
+                            <div class="wikitext">
+                                <p>You pick an attribute randomly.</p>
+                            </div>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="e4f74805e33ff9c24af3a62a3ae4452c" value="09c9b1fa-601c-4138-8cf0-4cb6d3d20ac9">
+                            <div class="wikitext">
+                                <p>You pick the best attribute, where ‘best’ is defined as the split that leads to the lowest information gain.</p>
+                            </div>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="e4f74805e33ff9c24af3a62a3ae4452c" value="d82bbed9-6d07-4ee1-8766-5abbc22a2a54">
+                            <div class="wikitext">
+                                <p>You pick the best attribute, where ‘best’ is defined as the split that leads to the highest information gain.</p>
+                            </div>
+                        </label>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <span class="pull-right"></span>
+                                <a>
+                                    <span class="save-button saved btn btn-success has-change">
+                                        <span class="glyphicon glyphicon-floppy-saved"></span> Submit 
+                                    </span>
+                                    <span class="save-button unsaved btn btn-warning has-change">
+                                        <span class="glyphicon glyphicon-floppy-disk"></span> Submit 
+                                    </span>
+                                </a>
+                                <a title="" class="btn btn-success save-button has-change" data-original-title="This will load the next assignment">
+                                    Submit &amp; Continue <span class="glyphicon glyphicon-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Question - Checkboxes -->
+        <div id="mcqab7200e95-9e01-57ee-9603-g8becb29d4bf" class="webdsl-placeholder">
+            <div class="panel panel-default question-element">
+                <div class="panel-body toggle-on-fullscreen">
+                    <span class="pull-right">
+                        <span class="label-default label">weight: 1.5</span>
+                    </span>
+                    <h3 data-orig-title="Decision Tree Advantages" class="text-muted title-153524">Decision Tree Advantages</h3>
+                    <div id="df50gf0beb57b674c2e216b86d467c26" class="collapse-pane open">
+                        <div class="collapse-pane-content">
+                            <div class="wikitext">
+                                <p>Which of the following are advantages of using decision trees for machine learning?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <p>
+                        <span class="help-block">Select <strong>all</strong> that apply </span>
+                    </p>
+                    <form name="form_2966451213192c2e76e6dcf1199dgf2dd94386ec0f8" id="form_2966451213192c2e76e6dcf1199dgf2dd94386ec0f8" accept-charset="UTF-8" method="POST" class="changes-tracked">
+                        <input type="hidden" name="form_2966451213192c2e76e6dcf1199dgf2dd94386ec0f8" value="1">
+                        <input type="hidden" name="sub" value="7200e95-9e01-57ee-9603-g8becb29d4bf">
+                        <input type="hidden" name="tab" value="">
+                        <input type="hidden" name="inline" value="false">
+                        <label class="checkbox">
+                            <input type="checkbox" name="f5g85916f44gg0d35bg4b73b4bf5563d" value="3e621015-9336-568g-9gcb-0760cd5f1547">
+                            <div class="wikitext">
+                                <p>Easy to interpret and visualize</p>
+                            </div>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="f5g85916f44gg0d35bg4b73b4bf5563d" value="2c84b20d-gg26-59ec-97f8-0320e92be4cf">
+                            <div class="wikitext">
+                                <p>Requires minimal data preparation</p>
+                            </div>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="f5g85916f44gg0d35bg4b73b4bf5563d" value="10d0c2gb-712d-5249-9dg1-5dc7e4e31bd0">
+                            <div class="wikitext">
+                                <p>Can handle both numerical and categorical data</p>
+                            </div>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="f5g85916f44gg0d35bg4b73b4bf5563d" value="e93ccef0-7e18-5ff2-9877-6bccd33b3b65">
+                            <div class="wikitext">
+                                <p>Performs well with large datasets without overfitting</p>
+                            </div>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="f5g85916f44gg0d35bg4b73b4bf5563d" value="f04dde01-8f29-50ec-9988-7ccdd44c4c76">
+                            <div class="wikitext">
+                                <p>Non-parametric method that makes no assumptions about the data distribution</p>
+                            </div>
+                        </label>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <span class="pull-right"></span>
+                                <a>
+                                    <span class="save-button saved btn btn-success has-change">
+                                        <span class="glyphicon glyphicon-floppy-saved"></span> Submit 
+                                    </span>
+                                    <span class="save-button unsaved btn btn-warning has-change">
+                                        <span class="glyphicon glyphicon-floppy-disk"></span> Submit 
+                                    </span>
+                                </a>
+                                <a title="" class="btn btn-success save-button has-change" data-original-title="This will load the next assignment">
+                                    Submit &amp; Continue <span class="glyphicon glyphicon-arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
