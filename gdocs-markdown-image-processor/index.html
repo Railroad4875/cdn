@@ -58,7 +58,7 @@
         <div class="card-header">
           <h2>Input Markdown</h2>
           <div class="card-header-buttons">
-            <button id="paste-btn" class="btn btn-primary">Paste</button>
+<!--             <button id="paste-btn" class="btn btn-primary">Paste</button> -->
             <button id="clear" class="btn">Clear</button>
           </div>
         </div>
@@ -215,23 +215,6 @@
         setTimeout(() => copyCleanedBtn.innerHTML = original, 2000);
       } catch (e) {
         showError('Failed to copy');
-      }
-    });
-
-    document.getElementById('paste-btn').addEventListener('click', () => {
-      // Ensure textarea is focused — required for execCommand('paste')
-      input.focus();
-
-      // Try to paste using legacy execCommand
-      try {
-        const success = document.execCommand('paste');
-        if (!success) {
-          throw new Error('execCommand("paste") returned false');
-        }
-        // Manually fire 'paste' event to trigger your existing handler
-        input.dispatchEvent(new Event('paste', { bubbles: true }));
-      } catch (err) {
-        showError('Paste failed. Try Ctrl+V directly into the textarea.');
       }
     });
   </script>
