@@ -56,6 +56,7 @@
       <div class="card">
         <div class="card-header">
           <h2>Input Markdown</h2>
+          <button id="paste-btn" class="btn btn-primary">Paste</button>
           <button id="clear" class="btn">Clear</button>
         </div>
         <textarea id="input" placeholder="Paste markdown with images like:
@@ -211,6 +212,16 @@
         setTimeout(() => copyCleanedBtn.innerHTML = original, 2000);
       } catch (e) {
         showError('Failed to copy');
+      }
+    });
+
+    document.getElementById('paste-btn').addEventListener('click', async () => {
+      try {
+        const text = await navigator.clipboard.readText();
+        input.value = text;
+        processInput(); // optional: auto-process after paste
+      } catch (err) {
+        showError('Failed to read clipboard. Ensure site is secure (HTTPS) and permission granted.');
       }
     });
   </script>
