@@ -218,21 +218,20 @@
       }
     });
 
-    document.getElementById('paste-btn').addEventListener('click', async () => {
+    document.getElementById('paste-btn').addEventListener('click', () => {
+      // Ensure textarea is focused — required for execCommand('paste')
+      input.focus();
+
+      // Try to paste using legacy execCommand
       try {
-        const text = await navigator.clipboard.readText();
-        // Set value and dispatch paste event (like user Ctrl+V)
-        input.focus();
-        const start = input.selectionStart;
-        const end = input.selectionEnd;
-        const before = input.value.substring(0, start);
-        const after = input.value.substring(end);
-        input.value = before + text + after;
-        // Trigger the same handlers as a real paste
-        input.dispatchEvent(new Event('input', { bubbles: true }));
+        const success = document.execCommand('paste');
+        if (!success) {
+          throw new Error('execCommand("paste") returned false');
+        }
+        // Manually fire 'paste' event to trigger your existing handler
         input.dispatchEvent(new Event('paste', { bubbles: true }));
       } catch (err) {
-        showError('Clipboard access denied. Try pasting directly (Ctrl+V).');
+        showError('Paste failed. Try Ctrl+V directly into the textarea.');
       }
     });
   </script>
