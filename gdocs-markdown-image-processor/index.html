@@ -218,10 +218,18 @@
     document.getElementById('paste-btn').addEventListener('click', async () => {
       try {
         const text = await navigator.clipboard.readText();
-        input.value = text;
-        processInput(); // optional: auto-process after paste
+        // Set value and dispatch paste event (like user Ctrl+V)
+        input.focus();
+        const start = input.selectionStart;
+        const end = input.selectionEnd;
+        const before = input.value.substring(0, start);
+        const after = input.value.substring(end);
+        input.value = before + text + after;
+        // Trigger the same handlers as a real paste
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('paste', { bubbles: true }));
       } catch (err) {
-        showError('Failed to read clipboard. Ensure site is secure (HTTPS) and permission granted.');
+        showError('Clipboard access denied. Try pasting directly (Ctrl+V).');
       }
     });
   </script>
