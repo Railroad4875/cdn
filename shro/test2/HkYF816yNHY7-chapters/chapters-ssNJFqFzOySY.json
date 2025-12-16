@@ -1,0 +1,13 @@
+{
+  "version": "1.2.0",
+  "chapters": [
+    {
+      "startTime": 0,
+      "title": "Intro"
+    },
+    {
+      "startTime": 1800,
+      "title": "Main Topic"
+    }
+  ]
+}
